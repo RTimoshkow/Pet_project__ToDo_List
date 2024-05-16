@@ -1,0 +1,120 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.taskCreationForm {
+}
+
+.container {
+  position: relative;
+}
+
+.edition__todo {
+  width: 300px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 30%;
+  text-align: center;
+
+  display: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+
+  z-index: 999;
+
+  top: 0;
+  background-color: black;
+  opacity: 0.5;
+
+  filter: blur(1px);
+}
+
+#formCreate {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 90%;
+  height: 90vh;
+  margin: 0 auto;
+
+  top: -100%;
+  border-radius: 20px;
+
+  background-color: #fff;
+  transition: top 0.7s;
+
+  z-index: 9999;
+}
+
+label {
+  margin-top: 40px;
+}
+
+.todo__item {
+  border: 1px solid black;
+
+  margin: 5px 0;
+  padding: 5px 5px 5px 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 30%;
+  position: relative;
+}
+
+.edition__todo {
+}
+
+/* Кнопки удаления и редактирования */
+.buttons__items {
+  width: 15%;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.button__item {
+  background: none;
+  border: none;
+}
+
+.button__item i {
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.todo__item:hover > .buttons__items i {
+  opacity: 0.5;
+}
+
+.fa-pen {
+  color: grey;
+}
+.fa-pen:hover {
+  color: #555353;
+}
+
+.fa-trash-can {
+  color: #d96f6f;
+}
+
+.fa-trash-can:hover {
+  color: #d73838;
+}

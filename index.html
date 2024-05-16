@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>TO DO LIST</title>
+    <script src="https://kit.fontawesome.com/1722effe7d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <header class="header">
+            <input type="text" class="edition__todo"> <!--поле редактирование задачи -->
+
+            <div class="createTask">
+                <button id="openForm">Создать новую задачу</button>
+                <div class="taskCreationForm">
+
+                    <div class="modal"></div> <!--затемнение экрана-->
+
+                    <form action="#" id="formCreate">
+                        <h1>Новая задача</h1>
+                        <label for="taskName">Название задачи</label>
+                        <input id="taskName" type="text" placeholder="Название задачи" name="taskName" required>
+
+                        <!-- <label for="priority">Пиоритет</label>
+                        <select id="priority" name="priority" id="" required>
+                            <option value="">Пожалуйста выберите приоритет</option>
+                            <option value="">высокий</option>
+                            <option value="">средний</option>
+                            <option value="">низкий</option>
+                        </select> -->
+
+                        <label for="description">Описание задачи</label>
+                        <textarea name="description" id="" cols="30" rows="1">Опишите задачу</textarea>
+
+                        <button type="submit" id="buttonCreationTask">Создать</button>
+                        <button type="button" id="closeForm">Закрыть</button>
+                    </form>
+
+                </div>
+            </div>
+            <!-- https://myrusakov.ru/js-popup-form.html -->
+
+        </header>
+
+        <main>
+
+            <ul class="taskList"></ul>
+        </main>
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+
+</html>
